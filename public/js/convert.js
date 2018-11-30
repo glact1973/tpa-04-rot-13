@@ -1,4 +1,3 @@
-/*
 const rot13Input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
 const rot13Output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'.split('');
 
@@ -15,16 +14,5 @@ const handleBtnConvert = function() {
   const convertedText = convertRot13(sourceText);
   document.querySelector('#container .destination-text').value = convertedText;
 };
-*/
-import { handleBtnConvert } from './convert.js';
 
-const initPage = function() {
-  const form = document.querySelector('#container .form-convert');
-  // see https://developer.mozilla.org/ja/docs/Web/API/Event/preventDefault
-  form.addEventListener('submit', evt => evt.preventDefault());
-
-  document.querySelector('.btn-convert')
-    .addEventListener('click', handleBtnConvert);
-};
-
-export { initPage };
+export { handleBtnConvert };
